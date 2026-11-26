@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KWIK·E·MART | Gestión de Pedidos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ================= HEAD (Mockups 01, 02, 03) ================= -->
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html" class="brand-area">
+        <img src="img/logo-kwik-e-mart.svg" alt="KWIK·E·MART" height="44">
+      </a>
+      <div id="header-actions" class="header-actions hidden">
+        <span id="user-status" class="user-status"></span>
+        <button type="button" id="btn-logout" class="btn btn-secondary">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+    <polyline points="16 17 21 12 16 7"/>
+    <line x1="21" y1="12" x2="9" y2="12"/>
+  </svg>
+  <span>Cerrar sesión</span>
+</button>
+      </div>
+    </div>
+    <div id="nav-strip" class="nav-strip hidden">
+      <nav id="main-nav" class="nav-bar" aria-label="Menú principal"></nav>
+    </div>
+  </header>
+
+  <!-- ================= BODY (RIU 2 y RIU 3) ================= -->
+  <main class="main-container">
+
+    <!-- Vista 1: Login Público (Mockup 01) -->
+    <section id="login-section" class="login-wrapper">
+      <div class="card">
+        <h2 class="card-title">Ingresar</h2>
+        <p class="card-subtitle">Accede con tu cuenta KWIK E MART.</p>
+
+        <div id="login-alert" class="alert-inline alert-danger hidden" role="alert"></div>
+
+        <form id="login-form" autocomplete="off">
+          <div class="form-group">
+            <label for="login-username">Usuario</label>
+            <input type="text" id="login-username" class="form-control" maxlength="50" required>
+          </div>
+
+          <div class="form-group">
+            <label for="login-password">Contraseña</label>
+            <input type="password" id="login-password" class="form-control" maxlength="50" required>
+          </div>
+
+          <button type="submit" class="btn btn-secondary btn-block">Ingresar</button>
+        </form>
+      </div>
+      <p class="demo-hint">Demo · Usuario: homero / donas123 · Administrador: apu / admin123</p>
+    </section>
+
+    <!-- Vista 2: Dashboard tras login exitoso (Mockups 02 y 03) -->
+    <section id="dashboard-section" class="hidden">
+      <div class="welcome-banner">
+        <div id="role-banner-label" class="welcome-role-label"></div>
+        <h1 id="welcome-message">Bienvenido</h1>
+      </div>
+
+      <div id="quick-cards" class="quick-access-grid"></div>
+    </section>
+
+  </main>
+
+  <!-- Modal Bloqueo por 3 intentos fallidos (RIU 2) -->
+  <div id="modal-lock" class="modal-backdrop" role="alertdialog" aria-modal="true">
+    <div class="modal-box">
+      <h3 class="modal-title">Cuenta bloqueada</h3>
+      <p class="modal-body">Cuenta bloqueada por intentos fallidos. Contacte al administrador.</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" onclick="closeModal('modal-lock')">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FOOT (Mockups 01 al 15) ================= -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Navegación</h4>
+        <ul id="footer-nav" class="footer-links"></ul>
+      </div>
+      <div class="footer-section">
+        <h4>Empresa</h4>
+        <ul class="footer-links">
+          <li><a href="#">Quiénes somos</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Redes sociales</h4>
+        <ul class="footer-links">
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://x.com" target="_blank" rel="noopener">X / Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 KWIK E MART. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
